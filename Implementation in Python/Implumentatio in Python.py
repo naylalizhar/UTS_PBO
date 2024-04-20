@@ -66,24 +66,24 @@ class LibrarySystem:
         else:
             return False
 
-# Contoh penggunaan sistem perpustakaan
+# penggunaan sistem perpustakaan
 if __name__ == "__main__":
     # Inisialisasi sistem perpustakaan
     library_system = LibrarySystem()
 
-    # Tambahkan beberapa buku ke dalam sistem
+    # Penambahan beberapa buku
     book1 = Book(1, "Python Programming", "John Smith")
     book2 = Book(2, "Data Science Handbook", "Jane Doe")
     library_system.add_book(book1)
     library_system.add_book(book2)
 
-    # Cari buku berdasarkan kata kunci
+    # Cari buku 
     search_results = library_system.search_book("Python")
     print("Search Results:")
     for book in search_results:
         print(f"- {book.title} by {book.author}")
 
-    # Simulasikan peminjaman buku
+    # peminjaman buku
     borrow_date = "2024-04-20"
     member_id = 1
     success = library_system.borrow_book(book1.book_id, member_id, borrow_date)
@@ -92,7 +92,7 @@ if __name__ == "__main__":
     else:
         print("Failed to borrow book. It may not be available.")
 
-    # Simulasikan pengembalian buku
+    # pengembalian buku
     return_date = "2024-04-25"
     transaction_id = 1  # Misalnya, ID transaksi pertama
     success = library_system.return_book(transaction_id, return_date)
